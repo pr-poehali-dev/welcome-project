@@ -3,37 +3,40 @@ import Icon from "@/components/ui/icon";
 const Features = () => {
   const features = [
     {
-      icon: "Rocket",
-      title: "Быстрый старт",
+      icon: "Skull",
+      title: "Реалистичное выживание",
       description:
-        "Запускайте проекты за считанные минуты с готовыми шаблонами",
-    },
-    {
-      icon: "Zap",
-      title: "Высокая производительность",
-      description: "Современные технологии для максимальной скорости работы",
-    },
-    {
-      icon: "Shield",
-      title: "Надёжность",
-      description: "Проверенные решения с гарантией стабильной работы",
+        "Охотись, избегай хищников и выживай в жестоком мире динозавров с реалистичной системой голода и жажды",
     },
     {
       icon: "Users",
-      title: "Командная работа",
-      description: "Эффективное сотрудничество в команде над проектами",
+      title: "Мультиплеер до 200 игроков",
+      description:
+        "Сражайся с другими игроками, создавай стаи или охотись в одиночку на огромных картах",
+    },
+    {
+      icon: "TreePine",
+      title: "Доисторический мир",
+      description:
+        "Исследуй детализированные биомы мезозойской эры с аутентичной флорой и фауной",
+    },
+    {
+      icon: "TrendingUp",
+      title: "Прогрессия персонажа",
+      description:
+        "Развивай своего динозавра от детеныша до взрослой особи, открывай новые способности",
     },
   ];
 
   return (
-    <section className="py-20 px-4 bg-gray-50">
+    <section className="py-20 px-4 bg-gray-900">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Почему выбирают нас?
+          <h2 className="text-5xl font-bold text-white mb-6">
+            Особенности игры
           </h2>
-          <p className="text-xl text-gray-600">
-            Мощные инструменты для реализации ваших идей
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            Погрузись в самый реалистичный симулятор жизни динозавров
           </p>
         </div>
 
@@ -41,19 +44,17 @@ const Features = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
+              className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-orange-500 transition-all duration-300 hover:-translate-y-2 text-center group"
             >
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Icon
-                  name={feature.icon}
-                  size={32}
-                  className="text-purple-600"
-                />
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <Icon name={feature.icon} size={32} className="text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <h3 className="text-xl font-bold text-white mb-4">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <p className="text-gray-400 leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>
