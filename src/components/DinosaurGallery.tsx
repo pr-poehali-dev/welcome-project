@@ -14,6 +14,7 @@ const DinosaurGallery = () => {
       description: "Быстрый хищник среднего размера с мощными челюстями",
       diet: "Хищник",
       size: "Средний",
+      price: 1000,
     },
     {
       name: "Утаринус",
@@ -22,6 +23,7 @@ const DinosaurGallery = () => {
       description: "Маленький быстрый хищник, охотится стаями",
       diet: "Хищник",
       size: "Маленький",
+      price: 500,
     },
     {
       name: "Цератозавр",
@@ -29,6 +31,7 @@ const DinosaurGallery = () => {
       description: "Крупный хищник с характерным рогом на носу",
       diet: "Хищник",
       size: "Большой",
+      price: 2500,
     },
     {
       name: "Диаблоцератопс",
@@ -37,6 +40,7 @@ const DinosaurGallery = () => {
       description: "Травоядный с массивным воротником и рогами",
       diet: "Травоядный",
       size: "Большой",
+      price: 2500,
     },
     {
       name: "Галлимим",
@@ -45,6 +49,7 @@ const DinosaurGallery = () => {
       description: "Быстрый страусоподобный динозавр",
       diet: "Всеядный",
       size: "Средний",
+      price: 1000,
     },
     {
       name: "Пахицефалозавр",
@@ -53,6 +58,7 @@ const DinosaurGallery = () => {
       description: "Травоядный с толстым черепом для боевых ударов",
       diet: "Травоядный",
       size: "Средний",
+      price: 1000,
     },
   ];
 
@@ -113,6 +119,11 @@ const DinosaurGallery = () => {
                   <CardTitle className="text-2xl font-bold text-white">
                     {dino.name}
                   </CardTitle>
+                  <div className="text-right">
+                    <div className="text-2xl font-bold text-orange-400">
+                      {dino.price}₽
+                    </div>
+                  </div>
                 </div>
 
                 <CardDescription className="text-gray-400 mb-4 leading-relaxed">
@@ -134,6 +145,70 @@ const DinosaurGallery = () => {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Секция оплаты */}
+        <div className="mt-20 max-w-4xl mx-auto">
+          <Card className="bg-gray-900 border-orange-500 border-2">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  💳 Информация для оплаты
+                </h3>
+                <p className="text-gray-400">
+                  Переведите деньги на карту и укажите желаемого динозавра в
+                  комментарии
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-gray-800 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-orange-400 mb-4">
+                    Реквизиты для перевода
+                  </h4>
+                  <div className="space-y-3 text-gray-300">
+                    <div>
+                      <span className="text-gray-400">Номер карты:</span>
+                      <div className="text-white font-mono text-lg">
+                        2202 2063 1234 5678
+                      </div>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Получатель:</span>
+                      <div className="text-white">Иван Петров</div>
+                    </div>
+                    <div>
+                      <span className="text-gray-400">Банк:</span>
+                      <div className="text-white">Сбербанк</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-800 p-6 rounded-lg">
+                  <h4 className="text-xl font-bold text-orange-400 mb-4">
+                    Инструкция по оплате
+                  </h4>
+                  <ol className="space-y-2 text-gray-300 list-decimal list-inside">
+                    <li>Переведите сумму за выбранного динозавра</li>
+                    <li>В комментарии укажите имя динозавра</li>
+                    <li>
+                      Напишите в Discord:{" "}
+                      <span className="text-orange-400">@EnergieSurvival</span>
+                    </li>
+                    <li>Прикрепите скриншот перевода</li>
+                    <li>Получите доступ к персонажу в течение 24 часов</li>
+                  </ol>
+
+                  <div className="mt-6 p-4 bg-orange-900/20 border border-orange-500 rounded-lg">
+                    <p className="text-orange-400 text-sm">
+                      ⚠️ Внимание: Возврат средств не предусмотрен. Убедитесь в
+                      правильности выбора динозавра.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
